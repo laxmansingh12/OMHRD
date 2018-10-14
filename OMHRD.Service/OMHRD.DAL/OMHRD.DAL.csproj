@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{19A5E94A-D0F9-4170-B697-B875D6F0095B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OMHRD.DAL</RootNamespace>
+    <AssemblyName>OMHRD.DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddressState_T.cs">
+      <DependentUpon>OMHRDModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Address_T.cs">
+      <DependentUpon>OMHRDModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BankAccount_T.cs">
+      <DependentUpon>OMHRDModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cart_T.cs">
+      <DependentUpon>OMHRDModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\ICartRepository.cs" />
+    <Compile Include="Interface\IUserRepository.cs" />
+    <Compile Include="Interface\IProductRepository.cs" />
+    <Compile Include="Nominee_T.cs">
+      <DependentUpon>OMHRDModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OMHRDModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OMHRDModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OMHRDModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OMHRDModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OMHRDModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OMHRDModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="OrderPayment_T.cs">
+      <DependentUpon>OMHRDModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrderProduct_T.cs">
+      <DependentUpon>OMHRDModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Order_T.cs">
+      <DependentUpon>OMHRDModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductCategory_T.cs">
+      <DependentUpon>OMHRDModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductColor_T.cs">
+      <DependentUpon>OMHRDModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductPrice_T.cs">
+      <DependentUpon>OMHRDModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductSize_T.cs">
+      <DependentUpon>OMHRDModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductSubCategory_T.cs">
+      <DependentUpon>OMHRDModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Product_T.cs">
+      <DependentUpon>OMHRDModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\CartRepository.cs" />
+    <Compile Include="Repository\UserRepository.cs" />
+    <Compile Include="Repository\ProductRepository.cs" />
+    <Compile Include="UserDocument_T.cs">
+      <DependentUpon>OMHRDModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserProfile_T.cs">
+      <DependentUpon>OMHRDModel.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OMHRD.Model\OMHRD.Model.csproj">
+      <Project>{64FAB63B-A40C-42D0-A21A-43BB6C36D9B2}</Project>
+      <Name>OMHRD.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <EntityDeploy Include="OMHRDModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>OMHRDModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="OMHRDModel.edmx.diagram">
+      <DependentUpon>OMHRDModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="OMHRDModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>OMHRDModel.edmx</DependentUpon>
+      <LastGenOutput>OMHRDModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="OMHRDModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>OMHRDModel.edmx</DependentUpon>
+      <LastGenOutput>OMHRDModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

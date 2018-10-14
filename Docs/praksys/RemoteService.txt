@@ -1,0 +1,48 @@
+﻿/**
+ * RemoteService is used to handle HTTP response statuses.
+ * @module RemoteService
+*/
+'use strict';
+angular.module('AdminModule').service('RemoteService', ['$q', '$http', 'toaster', 'localize', 'Spinner', function ($q, $http, toaster, localize, Spinner) {
+    this.Call = function (URL, METHOD, DATA, PARAMS) {
+        var request = $http({
+            method: METHOD,
+            url: URL,
+            params: PARAMS,
+            data: DATA
+        });
+        return (request.then(handleSuccess, handleError));
+    };
+    function handleError(response) {
+        $('#dvLoading').hide();
+        if (!angular.isObject(response.data) || !response.data.message) {
+            var Error = [];
+            var messageDisplay = localize.getLocalizedString("_CO_HOME_AdreesSomethingWrong_");
+            Error.push(messageDisplay);
+            toaster.pop('fatal', Error, "AuthorityServiceFatal", null, null, true);
+            return ($q.reject("An unknown error occurred."));
+        }
+        return ($q.reject(response.data.message));
+    };
+    function handleSuccess(response) {       
+        var Error = [];
+        if (response.status == 417 || response.status == 406) {
+            Spinner.hide();
+            Error.push(response.data);
+            toaster.pop('fatal', Error, "AuthorityServiceFatal", null, null, true);
+            return ($q.reject(response.data));
+        }
+        else if (response.status != 200) {
+            Spinner.hide();
+            angular.element('#dvLoading').hide();
+            response.data = -11;           
+            var messageDisplay = localize.getLocalizedString("_CO_HOME_AdreesSomethingWrong_");
+            Error.push(messageDisplay);
+            toaster.pop('fatal', Error, "AuthorityServiceFatal", null, null, true);
+            return ($q.reject(response.data.message));
+        }
+            
+       
+        return (response.data);
+    };
+}]);

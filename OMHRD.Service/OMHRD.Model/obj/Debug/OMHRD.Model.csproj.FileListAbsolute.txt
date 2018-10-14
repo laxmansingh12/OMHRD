@@ -1,0 +1,5 @@
+D:\Freelancing\OMHRD\OMHRD.Service\OMHRD.Model\bin\Debug\OMHRD.Model.dll
+D:\Freelancing\OMHRD\OMHRD.Service\OMHRD.Model\bin\Debug\OMHRD.Model.pdb
+D:\Freelancing\OMHRD\OMHRD.Service\OMHRD.Model\obj\Debug\OMHRD.Model.dll
+D:\Freelancing\OMHRD\OMHRD.Service\OMHRD.Model\obj\Debug\OMHRD.Model.pdb
+D:\Freelancing\OMHRD\OMHRD.Service\OMHRD.Model\obj\Debug\OMHRD.Model.csprojResolveAssemblyReference.cache

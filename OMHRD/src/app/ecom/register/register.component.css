@@ -1,0 +1,30 @@
+.header-grid-left ul li a {
+    cursor: pointer !important;
+}
+.register{
+    padding:0px;
+}
+.container{
+    width:100%;
+}
+
+.register h3{
+    font-size: 2em;
+}
+
+.login-form-grids {
+    width:100%;
+    padding: 1em;
+    margin:auto ;
+}
+
+.login-form-grids h5, .login-form-grids h6 {
+    margin: 1em 0 1em !important
+}
+.checkbox i {
+margin: auto !important;
+}
+.login-form-grids input[type="text"],.login-form-grids input[type="email"],.login-form-grids input[type="password"] {
+    
+    margin: 1em 0;
+}

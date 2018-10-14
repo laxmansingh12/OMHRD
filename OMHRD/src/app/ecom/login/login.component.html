@@ -1,0 +1,22 @@
+<h1 mat-dialog-title>Login</h1>
+<div mat-dialog-content>
+  
+  <p>
+    <mat-form-field appearance="outline">
+      <mat-label>Username</mat-label>
+      <input matInput placeholder="Username" [(ngModel)]="username" class="login-input">
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="outline">
+      <mat-label>Password</mat-label>
+      <input type="password" matInput placeholder="Password" [(ngModel)]="password" class="login-input">
+    </mat-form-field>
+  </p>
+
+</div>
+
+<div mat-dialog-actions>
+  <button mat-button [mat-dialog-close]>Cancel</button>
+  <button mat-button cdkFocusInitial (click)="doLogin()">Login</button>
+</div>

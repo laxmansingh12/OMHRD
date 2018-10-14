@@ -1,0 +1,40 @@
+﻿/**
+ * sessionInjector is a factory to inject jquery ajax request for token.
+ * @module sessionInjector
+*/
+app.factory('sessionInjector', ['clientCache', function (clientCache) {
+
+    var cacheHandler = clientCache;
+    //Injector for jquery ajax request
+    $.ajaxSetup({
+        beforeSend: function (xhr) {
+            xhr.setRequestHeader('x-session-token', cacheHandler.get('sessionContext'));
+        },
+        
+    });   
+    var sessionInjector = {
+        request: function (config) {
+
+            var token = cacheHandler.get('sessionContext');
+            config.headers['x-session-token'] = token;
+            return config;
+        },
+        response: function (response) {
+            if (response.headers('x-request-time') != null) {
+                logRequestResponseTime(response);
+            }
+            return response;
+        },
+        responseError: function (rejection) {
+            if (rejection.status === 503) {
+                window.location.href = '/Security/LogOut';
+            }
+            return rejection;
+        }
+    };
+    return sessionInjector;
+}]);
+app.config(['$httpProvider', function ($httpProvider) {
+    $httpProvider.interceptors.push('sessionInjector');
+}]);
+

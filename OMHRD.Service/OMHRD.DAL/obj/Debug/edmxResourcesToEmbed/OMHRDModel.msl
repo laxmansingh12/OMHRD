@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="OMHRDContextStoreContainer" CdmEntityContainer="OMHRDModel">
+    <EntitySetMapping Name="Address_T">
+      <EntityTypeMapping TypeName="OMHRDContext.Address_T">
+        <MappingFragment StoreEntitySet="Address_T">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="AddressStateCode" ColumnName="AddressStateCode" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="AddressLine2" ColumnName="AddressLine2" />
+          <ScalarProperty Name="AddressLine1" ColumnName="AddressLine1" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AddressState_T">
+      <EntityTypeMapping TypeName="OMHRDContext.AddressState_T">
+        <MappingFragment StoreEntitySet="AddressState_T">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="StateCode" ColumnName="StateCode" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BankAccount_T">
+      <EntityTypeMapping TypeName="OMHRDContext.BankAccount_T">
+        <MappingFragment StoreEntitySet="BankAccount_T">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Branch" ColumnName="Branch" />
+          <ScalarProperty Name="IFSC" ColumnName="IFSC" />
+          <ScalarProperty Name="AccountNo" ColumnName="AccountNo" />
+          <ScalarProperty Name="BankName" ColumnName="BankName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cart_T">
+      <EntityTypeMapping TypeName="OMHRDContext.Cart_T">
+        <MappingFragment StoreEntitySet="Cart_T">
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="ColorId" ColumnName="ColorId" />
+          <ScalarProperty Name="SizeId" ColumnName="SizeId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Nominee_T">
+      <EntityTypeMapping TypeName="OMHRDContext.Nominee_T">
+        <MappingFragment StoreEntitySet="Nominee_T">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Relation" ColumnName="Relation" />
+          <ScalarProperty Name="IdProofId" ColumnName="IdProofId" />
+          <ScalarProperty Name="IdProofType" ColumnName="IdProofType" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Order_T">
+      <EntityTypeMapping TypeName="OMHRDContext.Order_T">
+        <MappingFragment StoreEntitySet="Order_T">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderPayment_T">
+      <EntityTypeMapping TypeName="OMHRDContext.OrderPayment_T">
+        <MappingFragment StoreEntitySet="OrderPayment_T">
+          <ScalarProperty Name="FailureMessage" ColumnName="FailureMessage" />
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="PaymentMode" ColumnName="PaymentMode" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="TxnDatetime" ColumnName="TxnDatetime" />
+          <ScalarProperty Name="Txn" ColumnName="Txn" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderProduct_T">
+      <EntityTypeMapping TypeName="OMHRDContext.OrderProduct_T">
+        <MappingFragment StoreEntitySet="OrderProduct_T">
+          <ScalarProperty Name="DiscountPrice" ColumnName="DiscountPrice" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="ColorId" ColumnName="ColorId" />
+          <ScalarProperty Name="SizeId" ColumnName="SizeId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Product_T">
+      <EntityTypeMapping TypeName="OMHRDContext.Product_T">
+        <MappingFragment StoreEntitySet="Product_T">
+          <ScalarProperty Name="SubCategoryId" ColumnName="SubCategoryId" />
+          <ScalarProperty Name="DateModified" ColumnName="DateModified" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="Image3" ColumnName="Image3" />
+          <ScalarProperty Name="Image2" ColumnName="Image2" />
+          <ScalarProperty Name="Image1" ColumnName="Image1" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="GST" ColumnName="GST" />
+          <ScalarProperty Name="HSN" ColumnName="HSN" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductCategory_T">
+      <EntityTypeMapping TypeName="OMHRDContext.ProductCategory_T">
+        <MappingFragment StoreEntitySet="ProductCategory_T">
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductColor_T">
+      <EntityTypeMapping TypeName="OMHRDContext.ProductColor_T">
+        <MappingFragment StoreEntitySet="ProductColor_T">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductPrice_T">
+      <EntityTypeMapping TypeName="OMHRDContext.ProductPrice_T">
+        <MappingFragment StoreEntitySet="ProductPrice_T">
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="ProductColorId" ColumnName="ProductColorId" />
+          <ScalarProperty Name="ProductSizeId" ColumnName="ProductSizeId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductSize_T">
+      <EntityTypeMapping TypeName="OMHRDContext.ProductSize_T">
+        <MappingFragment StoreEntitySet="ProductSize_T">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductSubCategory_T">
+      <EntityTypeMapping TypeName="OMHRDContext.ProductSubCategory_T">
+        <MappingFragment StoreEntitySet="ProductSubCategory_T">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserDocument_T">
+      <EntityTypeMapping TypeName="OMHRDContext.UserDocument_T">
+        <MappingFragment StoreEntitySet="UserDocument_T">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="DocImage" ColumnName="DocImage" />
+          <ScalarProperty Name="DocNumber" ColumnName="DocNumber" />
+          <ScalarProperty Name="DocType" ColumnName="DocType" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserProfile_T">
+      <EntityTypeMapping TypeName="OMHRDContext.UserProfile_T">
+        <MappingFragment StoreEntitySet="UserProfile_T">
+          <ScalarProperty Name="IsSpecialUser" ColumnName="IsSpecialUser" />
+          <ScalarProperty Name="DateModified" ColumnName="DateModified" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="WalletBalance" ColumnName="WalletBalance" />
+          <ScalarProperty Name="UserParentId" ColumnName="UserParentId" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="PhotoImage" ColumnName="PhotoImage" />
+          <ScalarProperty Name="Facebook" ColumnName="Facebook" />
+          <ScalarProperty Name="Teitter" ColumnName="Teitter" />
+          <ScalarProperty Name="Skype" ColumnName="Skype" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="CoApplicant" ColumnName="CoApplicant" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Website" ColumnName="Website" />
+          <ScalarProperty Name="SmartDeliveryDate" ColumnName="SmartDeliveryDate" />
+          <ScalarProperty Name="AnniversaryDate" ColumnName="AnniversaryDate" />
+          <ScalarProperty Name="WFile" ColumnName="WFile" />
+          <ScalarProperty Name="TexExempt" ColumnName="TexExempt" />
+          <ScalarProperty Name="IdentificationType" ColumnName="IdentificationType" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="RegistrationDate" ColumnName="RegistrationDate" />
+          <ScalarProperty Name="ReferenceBy" ColumnName="ReferenceBy" />
+          <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

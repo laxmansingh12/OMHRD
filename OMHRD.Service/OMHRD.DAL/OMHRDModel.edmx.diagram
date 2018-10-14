@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="520442c5092f4bafbcb1e7f88c2db84b" Name="Diagram1">
+        <EntityTypeShape EntityType="OMHRDContext.Address_T" Width="1.5" PointX="3" PointY="12.125" />
+        <EntityTypeShape EntityType="OMHRDContext.AddressState_T" Width="1.5" PointX="0.75" PointY="7.625" />
+        <EntityTypeShape EntityType="OMHRDContext.BankAccount_T" Width="1.5" PointX="3" PointY="16" />
+        <EntityTypeShape EntityType="OMHRDContext.Cart_T" Width="1.5" PointX="6" PointY="13.125" />
+        <EntityTypeShape EntityType="OMHRDContext.Nominee_T" Width="1.5" PointX="3" PointY="25.5" />
+        <EntityTypeShape EntityType="OMHRDContext.Order_T" Width="1.5" PointX="3" PointY="19.25" />
+        <EntityTypeShape EntityType="OMHRDContext.OrderPayment_T" Width="1.5" PointX="5.25" PointY="19.125" />
+        <EntityTypeShape EntityType="OMHRDContext.OrderProduct_T" Width="1.5" PointX="8.25" PointY="18.875" />
+        <EntityTypeShape EntityType="OMHRDContext.Product_T" Width="1.5" PointX="3.75" PointY="2.5" />
+        <EntityTypeShape EntityType="OMHRDContext.ProductCategory_T" Width="1.5" PointX="1.5" PointY="0.75" />
+        <EntityTypeShape EntityType="OMHRDContext.ProductColor_T" Width="1.5" PointX="3.75" PointY="8.5" />
+        <EntityTypeShape EntityType="OMHRDContext.ProductPrice_T" Width="1.5" PointX="9" PointY="13.625" />
+        <EntityTypeShape EntityType="OMHRDContext.ProductSize_T" Width="1.5" PointX="3.75" PointY="29.5" />
+        <EntityTypeShape EntityType="OMHRDContext.ProductSubCategory_T" Width="1.5" PointX="1.5" PointY="3.625" />
+        <EntityTypeShape EntityType="OMHRDContext.UserDocument_T" Width="1.5" PointX="3" PointY="22.625" />
+        <EntityTypeShape EntityType="OMHRDContext.UserProfile_T" Width="1.5" PointX="0.75" PointY="10.5" />
+        <AssociationConnector Association="OMHRDContext.FK_Address_T_AddressState_T" />
+        <AssociationConnector Association="OMHRDContext.FK_Address_T_UserProfile_T" />
+        <AssociationConnector Association="OMHRDContext.FK_BankAccount_T_UserProfile_T" />
+        <AssociationConnector Association="OMHRDContext.FK_Cart_T_Product_T" />
+        <AssociationConnector Association="OMHRDContext.FK_Cart_T_ProductColor_T" />
+        <AssociationConnector Association="OMHRDContext.FK_Cart_T_ProductSize_T" />
+        <AssociationConnector Association="OMHRDContext.FK_Cart_T_UserProfile_T" />
+        <AssociationConnector Association="OMHRDContext.FK_Nominee_T_UserProfile_T" />
+        <AssociationConnector Association="OMHRDContext.FK_Order_T_UserProfile_T" />
+        <AssociationConnector Association="OMHRDContext.FK_OrderPayment_T_Order_T" />
+        <AssociationConnector Association="OMHRDContext.FK_OrderProduct_T_Order_T" />
+        <AssociationConnector Association="OMHRDContext.FK_OrderProduct_T_Product_T" />
+        <AssociationConnector Association="OMHRDContext.FK_OrderProduct_T_ProductColor_T" />
+        <AssociationConnector Association="OMHRDContext.FK_OrderProduct_T_ProductSize_T" />
+        <AssociationConnector Association="OMHRDContext.FK_Product_T_ProductSubCategory_T" />
+        <AssociationConnector Association="OMHRDContext.FK_ProductPrice_T_Product_T" />
+        <AssociationConnector Association="OMHRDContext.FK_ProductSubCategory_T_ProductCategory_T" />
+        <AssociationConnector Association="OMHRDContext.FK_ProductPrice_T_ProductColor_T" />
+        <AssociationConnector Association="OMHRDContext.FK_ProductPrice_T_ProductSize_T" />
+        <AssociationConnector Association="OMHRDContext.FK_UserDocument_T_UserDocument_T" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,11 @@
+D:\Freelancing\OMHRD\OMHRD.Service\OMHRD.BL\bin\Debug\OMHRD.BL.dll
+D:\Freelancing\OMHRD\OMHRD.Service\OMHRD.BL\bin\Debug\OMHRD.BL.pdb
+D:\Freelancing\OMHRD\OMHRD.Service\OMHRD.BL\obj\Debug\OMHRD.BL.dll
+D:\Freelancing\OMHRD\OMHRD.Service\OMHRD.BL\obj\Debug\OMHRD.BL.pdb
+D:\Freelancing\OMHRD\OMHRD.Service\OMHRD.BL\bin\Debug\OMHRD.DAL.dll
+D:\Freelancing\OMHRD\OMHRD.Service\OMHRD.BL\bin\Debug\OMHRD.Model.dll
+D:\Freelancing\OMHRD\OMHRD.Service\OMHRD.BL\bin\Debug\EntityFramework.dll
+D:\Freelancing\OMHRD\OMHRD.Service\OMHRD.BL\bin\Debug\OMHRD.DAL.pdb
+D:\Freelancing\OMHRD\OMHRD.Service\OMHRD.BL\bin\Debug\OMHRD.Model.pdb
+D:\Freelancing\OMHRD\OMHRD.Service\OMHRD.BL\bin\Debug\EntityFramework.xml
+D:\Freelancing\OMHRD\OMHRD.Service\OMHRD.BL\obj\Debug\OMHRD.BL.csprojResolveAssemblyReference.cache

@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OMHRD.API", "OMHRD.API\OMHRD.API.csproj", "{17EF81DF-E9CD-4D0B-B44B-CB4679E70283}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OMHRD.BL", "OMHRD.BL\OMHRD.BL.csproj", "{831D18E4-200B-45D1-AD82-39DFD21DF691}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OMHRD.DAL", "OMHRD.DAL\OMHRD.DAL.csproj", "{19A5E94A-D0F9-4170-B697-B875D6F0095B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OMHRD.Model", "OMHRD.Model\OMHRD.Model.csproj", "{64FAB63B-A40C-42D0-A21A-43BB6C36D9B2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{17EF81DF-E9CD-4D0B-B44B-CB4679E70283}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17EF81DF-E9CD-4D0B-B44B-CB4679E70283}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17EF81DF-E9CD-4D0B-B44B-CB4679E70283}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17EF81DF-E9CD-4D0B-B44B-CB4679E70283}.Release|Any CPU.Build.0 = Release|Any CPU
+		{831D18E4-200B-45D1-AD82-39DFD21DF691}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{831D18E4-200B-45D1-AD82-39DFD21DF691}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{831D18E4-200B-45D1-AD82-39DFD21DF691}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{831D18E4-200B-45D1-AD82-39DFD21DF691}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19A5E94A-D0F9-4170-B697-B875D6F0095B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19A5E94A-D0F9-4170-B697-B875D6F0095B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19A5E94A-D0F9-4170-B697-B875D6F0095B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19A5E94A-D0F9-4170-B697-B875D6F0095B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64FAB63B-A40C-42D0-A21A-43BB6C36D9B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64FAB63B-A40C-42D0-A21A-43BB6C36D9B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64FAB63B-A40C-42D0-A21A-43BB6C36D9B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64FAB63B-A40C-42D0-A21A-43BB6C36D9B2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,11 @@
+ul.select-size{
+    margin: 0px !important;
+}
+
+ul.select-size li a {
+    cursor: pointer;
+}
+
+.color-quality li a{
+    cursor: pointer;
+}

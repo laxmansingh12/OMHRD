@@ -1,0 +1,579 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="OMHRDContext" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="OMHRDModel" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Address_T" EntityType="OMHRDContext.Address_T" />
+    <EntitySet Name="AddressState_T" EntityType="OMHRDContext.AddressState_T" />
+    <EntitySet Name="BankAccount_T" EntityType="OMHRDContext.BankAccount_T" />
+    <EntitySet Name="Cart_T" EntityType="OMHRDContext.Cart_T" />
+    <EntitySet Name="Nominee_T" EntityType="OMHRDContext.Nominee_T" />
+    <EntitySet Name="Order_T" EntityType="OMHRDContext.Order_T" />
+    <EntitySet Name="OrderPayment_T" EntityType="OMHRDContext.OrderPayment_T" />
+    <EntitySet Name="OrderProduct_T" EntityType="OMHRDContext.OrderProduct_T" />
+    <EntitySet Name="Product_T" EntityType="OMHRDContext.Product_T" />
+    <EntitySet Name="ProductCategory_T" EntityType="OMHRDContext.ProductCategory_T" />
+    <EntitySet Name="ProductColor_T" EntityType="OMHRDContext.ProductColor_T" />
+    <EntitySet Name="ProductPrice_T" EntityType="OMHRDContext.ProductPrice_T" />
+    <EntitySet Name="ProductSize_T" EntityType="OMHRDContext.ProductSize_T" />
+    <EntitySet Name="ProductSubCategory_T" EntityType="OMHRDContext.ProductSubCategory_T" />
+    <EntitySet Name="UserDocument_T" EntityType="OMHRDContext.UserDocument_T" />
+    <EntitySet Name="UserProfile_T" EntityType="OMHRDContext.UserProfile_T" />
+    <AssociationSet Name="FK_Address_T_AddressState_T" Association="OMHRDContext.FK_Address_T_AddressState_T">
+      <End Role="AddressState_T" EntitySet="AddressState_T" />
+      <End Role="Address_T" EntitySet="Address_T" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Address_T_UserProfile_T" Association="OMHRDContext.FK_Address_T_UserProfile_T">
+      <End Role="UserProfile_T" EntitySet="UserProfile_T" />
+      <End Role="Address_T" EntitySet="Address_T" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BankAccount_T_UserProfile_T" Association="OMHRDContext.FK_BankAccount_T_UserProfile_T">
+      <End Role="UserProfile_T" EntitySet="UserProfile_T" />
+      <End Role="BankAccount_T" EntitySet="BankAccount_T" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cart_T_Product_T" Association="OMHRDContext.FK_Cart_T_Product_T">
+      <End Role="Product_T" EntitySet="Product_T" />
+      <End Role="Cart_T" EntitySet="Cart_T" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cart_T_ProductColor_T" Association="OMHRDContext.FK_Cart_T_ProductColor_T">
+      <End Role="ProductColor_T" EntitySet="ProductColor_T" />
+      <End Role="Cart_T" EntitySet="Cart_T" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cart_T_ProductSize_T" Association="OMHRDContext.FK_Cart_T_ProductSize_T">
+      <End Role="ProductSize_T" EntitySet="ProductSize_T" />
+      <End Role="Cart_T" EntitySet="Cart_T" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cart_T_UserProfile_T" Association="OMHRDContext.FK_Cart_T_UserProfile_T">
+      <End Role="UserProfile_T" EntitySet="UserProfile_T" />
+      <End Role="Cart_T" EntitySet="Cart_T" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Nominee_T_UserProfile_T" Association="OMHRDContext.FK_Nominee_T_UserProfile_T">
+      <End Role="UserProfile_T" EntitySet="UserProfile_T" />
+      <End Role="Nominee_T" EntitySet="Nominee_T" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Order_T_UserProfile_T" Association="OMHRDContext.FK_Order_T_UserProfile_T">
+      <End Role="UserProfile_T" EntitySet="UserProfile_T" />
+      <End Role="Order_T" EntitySet="Order_T" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderPayment_T_Order_T" Association="OMHRDContext.FK_OrderPayment_T_Order_T">
+      <End Role="Order_T" EntitySet="Order_T" />
+      <End Role="OrderPayment_T" EntitySet="OrderPayment_T" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderProduct_T_Order_T" Association="OMHRDContext.FK_OrderProduct_T_Order_T">
+      <End Role="Order_T" EntitySet="Order_T" />
+      <End Role="OrderProduct_T" EntitySet="OrderProduct_T" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderProduct_T_Product_T" Association="OMHRDContext.FK_OrderProduct_T_Product_T">
+      <End Role="Product_T" EntitySet="Product_T" />
+      <End Role="OrderProduct_T" EntitySet="OrderProduct_T" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderProduct_T_ProductColor_T" Association="OMHRDContext.FK_OrderProduct_T_ProductColor_T">
+      <End Role="ProductColor_T" EntitySet="ProductColor_T" />
+      <End Role="OrderProduct_T" EntitySet="OrderProduct_T" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderProduct_T_ProductSize_T" Association="OMHRDContext.FK_OrderProduct_T_ProductSize_T">
+      <End Role="ProductSize_T" EntitySet="ProductSize_T" />
+      <End Role="OrderProduct_T" EntitySet="OrderProduct_T" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_T_ProductSubCategory_T" Association="OMHRDContext.FK_Product_T_ProductSubCategory_T">
+      <End Role="ProductSubCategory_T" EntitySet="ProductSubCategory_T" />
+      <End Role="Product_T" EntitySet="Product_T" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductPrice_T_Product_T" Association="OMHRDContext.FK_ProductPrice_T_Product_T">
+      <End Role="Product_T" EntitySet="Product_T" />
+      <End Role="ProductPrice_T" EntitySet="ProductPrice_T" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductSubCategory_T_ProductCategory_T" Association="OMHRDContext.FK_ProductSubCategory_T_ProductCategory_T">
+      <End Role="ProductCategory_T" EntitySet="ProductCategory_T" />
+      <End Role="ProductSubCategory_T" EntitySet="ProductSubCategory_T" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductPrice_T_ProductColor_T" Association="OMHRDContext.FK_ProductPrice_T_ProductColor_T">
+      <End Role="ProductColor_T" EntitySet="ProductColor_T" />
+      <End Role="ProductPrice_T" EntitySet="ProductPrice_T" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductPrice_T_ProductSize_T" Association="OMHRDContext.FK_ProductPrice_T_ProductSize_T">
+      <End Role="ProductSize_T" EntitySet="ProductSize_T" />
+      <End Role="ProductPrice_T" EntitySet="ProductPrice_T" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserDocument_T_UserDocument_T" Association="OMHRDContext.FK_UserDocument_T_UserDocument_T">
+      <End Role="UserProfile_T" EntitySet="UserProfile_T" />
+      <End Role="UserDocument_T" EntitySet="UserDocument_T" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Address_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="AddressLine1" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="AddressLine2" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="City" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AddressStateCode" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="Type" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="AddressState_T" Relationship="OMHRDContext.FK_Address_T_AddressState_T" FromRole="Address_T" ToRole="AddressState_T" />
+    <NavigationProperty Name="UserProfile_T" Relationship="OMHRDContext.FK_Address_T_UserProfile_T" FromRole="Address_T" ToRole="UserProfile_T" />
+  </EntityType>
+  <EntityType Name="AddressState_T">
+    <Key>
+      <PropertyRef Name="StateCode" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StateCode" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Address_T" Relationship="OMHRDContext.FK_Address_T_AddressState_T" FromRole="AddressState_T" ToRole="Address_T" />
+  </EntityType>
+  <EntityType Name="BankAccount_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BankName" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="AccountNo" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IFSC" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Branch" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="UserProfile_T" Relationship="OMHRDContext.FK_BankAccount_T_UserProfile_T" FromRole="BankAccount_T" ToRole="UserProfile_T" />
+  </EntityType>
+  <EntityType Name="Cart_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="ProductId" Type="Int32" Nullable="false" />
+    <Property Name="SizeId" Type="Int32" Nullable="false" />
+    <Property Name="ColorId" Type="Int32" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Product_T" Relationship="OMHRDContext.FK_Cart_T_Product_T" FromRole="Cart_T" ToRole="Product_T" />
+    <NavigationProperty Name="ProductColor_T" Relationship="OMHRDContext.FK_Cart_T_ProductColor_T" FromRole="Cart_T" ToRole="ProductColor_T" />
+    <NavigationProperty Name="ProductSize_T" Relationship="OMHRDContext.FK_Cart_T_ProductSize_T" FromRole="Cart_T" ToRole="ProductSize_T" />
+    <NavigationProperty Name="UserProfile_T" Relationship="OMHRDContext.FK_Cart_T_UserProfile_T" FromRole="Cart_T" ToRole="UserProfile_T" />
+  </EntityType>
+  <EntityType Name="Nominee_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="IdProofType" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IdProofId" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Relation" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="UserProfile_T" Relationship="OMHRDContext.FK_Nominee_T_UserProfile_T" FromRole="Nominee_T" ToRole="UserProfile_T" />
+  </EntityType>
+  <EntityType Name="Order_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrderNo" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="OrderDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="Status" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="UserProfile_T" Relationship="OMHRDContext.FK_Order_T_UserProfile_T" FromRole="Order_T" ToRole="UserProfile_T" />
+    <NavigationProperty Name="OrderPayment_T" Relationship="OMHRDContext.FK_OrderPayment_T_Order_T" FromRole="Order_T" ToRole="OrderPayment_T" />
+    <NavigationProperty Name="OrderProduct_T" Relationship="OMHRDContext.FK_OrderProduct_T_Order_T" FromRole="Order_T" ToRole="OrderProduct_T" />
+  </EntityType>
+  <EntityType Name="OrderPayment_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Txn" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="TxnDatetime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Amount" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="PaymentMode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="OrderId" Type="Int32" Nullable="false" />
+    <Property Name="FailureMessage" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Order_T" Relationship="OMHRDContext.FK_OrderPayment_T_Order_T" FromRole="OrderPayment_T" ToRole="Order_T" />
+  </EntityType>
+  <EntityType Name="OrderProduct_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrderId" Type="Int32" Nullable="false" />
+    <Property Name="ProductId" Type="Int32" Nullable="false" />
+    <Property Name="SizeId" Type="Int32" Nullable="false" />
+    <Property Name="ColorId" Type="Int32" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <Property Name="Price" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="DiscountPrice" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <NavigationProperty Name="Order_T" Relationship="OMHRDContext.FK_OrderProduct_T_Order_T" FromRole="OrderProduct_T" ToRole="Order_T" />
+    <NavigationProperty Name="Product_T" Relationship="OMHRDContext.FK_OrderProduct_T_Product_T" FromRole="OrderProduct_T" ToRole="Product_T" />
+    <NavigationProperty Name="ProductColor_T" Relationship="OMHRDContext.FK_OrderProduct_T_ProductColor_T" FromRole="OrderProduct_T" ToRole="ProductColor_T" />
+    <NavigationProperty Name="ProductSize_T" Relationship="OMHRDContext.FK_OrderProduct_T_ProductSize_T" FromRole="OrderProduct_T" ToRole="ProductSize_T" />
+  </EntityType>
+  <EntityType Name="Product_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Code" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="HSN" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="GST" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <Property Name="Image1" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+    <Property Name="Image2" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+    <Property Name="Image3" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+    <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DateModified" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="SubCategoryId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Cart_T" Relationship="OMHRDContext.FK_Cart_T_Product_T" FromRole="Product_T" ToRole="Cart_T" />
+    <NavigationProperty Name="OrderProduct_T" Relationship="OMHRDContext.FK_OrderProduct_T_Product_T" FromRole="Product_T" ToRole="OrderProduct_T" />
+    <NavigationProperty Name="ProductSubCategory_T" Relationship="OMHRDContext.FK_Product_T_ProductSubCategory_T" FromRole="Product_T" ToRole="ProductSubCategory_T" />
+    <NavigationProperty Name="ProductPrice_T" Relationship="OMHRDContext.FK_ProductPrice_T_Product_T" FromRole="Product_T" ToRole="ProductPrice_T" />
+  </EntityType>
+  <EntityType Name="ProductCategory_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Remark" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ProductSubCategory_T" Relationship="OMHRDContext.FK_ProductSubCategory_T_ProductCategory_T" FromRole="ProductCategory_T" ToRole="ProductSubCategory_T" />
+  </EntityType>
+  <EntityType Name="ProductColor_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Code" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Cart_T" Relationship="OMHRDContext.FK_Cart_T_ProductColor_T" FromRole="ProductColor_T" ToRole="Cart_T" />
+    <NavigationProperty Name="OrderProduct_T" Relationship="OMHRDContext.FK_OrderProduct_T_ProductColor_T" FromRole="ProductColor_T" ToRole="OrderProduct_T" />
+    <NavigationProperty Name="ProductPrice_T" Relationship="OMHRDContext.FK_ProductPrice_T_ProductColor_T" FromRole="ProductColor_T" ToRole="ProductPrice_T" />
+  </EntityType>
+  <EntityType Name="ProductPrice_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductId" Type="Int32" Nullable="false" />
+    <Property Name="ProductSizeId" Type="Int32" Nullable="false" />
+    <Property Name="ProductColorId" Type="Int32" />
+    <Property Name="Price" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Discount" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Product_T" Relationship="OMHRDContext.FK_ProductPrice_T_Product_T" FromRole="ProductPrice_T" ToRole="Product_T" />
+    <NavigationProperty Name="ProductColor_T" Relationship="OMHRDContext.FK_ProductPrice_T_ProductColor_T" FromRole="ProductPrice_T" ToRole="ProductColor_T" />
+    <NavigationProperty Name="ProductSize_T" Relationship="OMHRDContext.FK_ProductPrice_T_ProductSize_T" FromRole="ProductPrice_T" ToRole="ProductSize_T" />
+  </EntityType>
+  <EntityType Name="ProductSize_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Code" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Cart_T" Relationship="OMHRDContext.FK_Cart_T_ProductSize_T" FromRole="ProductSize_T" ToRole="Cart_T" />
+    <NavigationProperty Name="OrderProduct_T" Relationship="OMHRDContext.FK_OrderProduct_T_ProductSize_T" FromRole="ProductSize_T" ToRole="OrderProduct_T" />
+    <NavigationProperty Name="ProductPrice_T" Relationship="OMHRDContext.FK_ProductPrice_T_ProductSize_T" FromRole="ProductSize_T" ToRole="ProductPrice_T" />
+  </EntityType>
+  <EntityType Name="ProductSubCategory_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryId" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Product_T" Relationship="OMHRDContext.FK_Product_T_ProductSubCategory_T" FromRole="ProductSubCategory_T" ToRole="Product_T" />
+    <NavigationProperty Name="ProductCategory_T" Relationship="OMHRDContext.FK_ProductSubCategory_T_ProductCategory_T" FromRole="ProductSubCategory_T" ToRole="ProductCategory_T" />
+  </EntityType>
+  <EntityType Name="UserDocument_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DocType" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DocNumber" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DocImage" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="UserProfile_T" Relationship="OMHRDContext.FK_UserDocument_T_UserDocument_T" FromRole="UserDocument_T" ToRole="UserProfile_T" />
+  </EntityType>
+  <EntityType Name="UserProfile_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FirstName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MiddleName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DOB" Type="DateTime" Precision="0" />
+    <Property Name="ContactNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ReferenceBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RegistrationDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="CompanyName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="IdentificationType" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="TexExempt" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="WFile" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AnniversaryDate" Type="DateTime" Precision="0" />
+    <Property Name="SmartDeliveryDate" Type="DateTime" Precision="0" />
+    <Property Name="Website" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Fax" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CoApplicant" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Language" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Skype" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Teitter" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Facebook" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PhotoImage" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UserParentId" Type="Int32" />
+    <Property Name="WalletBalance" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DateModified" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IsSpecialUser" Type="Boolean" />
+    <NavigationProperty Name="Address_T" Relationship="OMHRDContext.FK_Address_T_UserProfile_T" FromRole="UserProfile_T" ToRole="Address_T" />
+    <NavigationProperty Name="BankAccount_T" Relationship="OMHRDContext.FK_BankAccount_T_UserProfile_T" FromRole="UserProfile_T" ToRole="BankAccount_T" />
+    <NavigationProperty Name="Cart_T" Relationship="OMHRDContext.FK_Cart_T_UserProfile_T" FromRole="UserProfile_T" ToRole="Cart_T" />
+    <NavigationProperty Name="Nominee_T" Relationship="OMHRDContext.FK_Nominee_T_UserProfile_T" FromRole="UserProfile_T" ToRole="Nominee_T" />
+    <NavigationProperty Name="Order_T" Relationship="OMHRDContext.FK_Order_T_UserProfile_T" FromRole="UserProfile_T" ToRole="Order_T" />
+    <NavigationProperty Name="UserDocument_T" Relationship="OMHRDContext.FK_UserDocument_T_UserDocument_T" FromRole="UserProfile_T" ToRole="UserDocument_T" />
+  </EntityType>
+  <Association Name="FK_Address_T_AddressState_T">
+    <End Type="OMHRDContext.AddressState_T" Role="AddressState_T" Multiplicity="1" />
+    <End Type="OMHRDContext.Address_T" Role="Address_T" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AddressState_T">
+        <PropertyRef Name="StateCode" />
+      </Principal>
+      <Dependent Role="Address_T">
+        <PropertyRef Name="AddressStateCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Address_T_UserProfile_T">
+    <End Type="OMHRDContext.UserProfile_T" Role="UserProfile_T" Multiplicity="1" />
+    <End Type="OMHRDContext.Address_T" Role="Address_T" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserProfile_T">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Address_T">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BankAccount_T_UserProfile_T">
+    <End Type="OMHRDContext.UserProfile_T" Role="UserProfile_T" Multiplicity="1" />
+    <End Type="OMHRDContext.BankAccount_T" Role="BankAccount_T" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserProfile_T">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BankAccount_T">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cart_T_Product_T">
+    <End Type="OMHRDContext.Product_T" Role="Product_T" Multiplicity="1" />
+    <End Type="OMHRDContext.Cart_T" Role="Cart_T" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product_T">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Cart_T">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cart_T_ProductColor_T">
+    <End Type="OMHRDContext.ProductColor_T" Role="ProductColor_T" Multiplicity="0..1" />
+    <End Type="OMHRDContext.Cart_T" Role="Cart_T" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductColor_T">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Cart_T">
+        <PropertyRef Name="ColorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cart_T_ProductSize_T">
+    <End Type="OMHRDContext.ProductSize_T" Role="ProductSize_T" Multiplicity="1" />
+    <End Type="OMHRDContext.Cart_T" Role="Cart_T" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductSize_T">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Cart_T">
+        <PropertyRef Name="SizeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cart_T_UserProfile_T">
+    <End Type="OMHRDContext.UserProfile_T" Role="UserProfile_T" Multiplicity="1" />
+    <End Type="OMHRDContext.Cart_T" Role="Cart_T" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserProfile_T">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Cart_T">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Nominee_T_UserProfile_T">
+    <End Type="OMHRDContext.UserProfile_T" Role="UserProfile_T" Multiplicity="1" />
+    <End Type="OMHRDContext.Nominee_T" Role="Nominee_T" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserProfile_T">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Nominee_T">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Order_T_UserProfile_T">
+    <End Type="OMHRDContext.UserProfile_T" Role="UserProfile_T" Multiplicity="1" />
+    <End Type="OMHRDContext.Order_T" Role="Order_T" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserProfile_T">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Order_T">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderPayment_T_Order_T">
+    <End Type="OMHRDContext.Order_T" Role="Order_T" Multiplicity="1" />
+    <End Type="OMHRDContext.OrderPayment_T" Role="OrderPayment_T" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Order_T">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OrderPayment_T">
+        <PropertyRef Name="OrderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderProduct_T_Order_T">
+    <End Type="OMHRDContext.Order_T" Role="Order_T" Multiplicity="1" />
+    <End Type="OMHRDContext.OrderProduct_T" Role="OrderProduct_T" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Order_T">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OrderProduct_T">
+        <PropertyRef Name="OrderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderProduct_T_Product_T">
+    <End Type="OMHRDContext.Product_T" Role="Product_T" Multiplicity="1" />
+    <End Type="OMHRDContext.OrderProduct_T" Role="OrderProduct_T" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product_T">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OrderProduct_T">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderProduct_T_ProductColor_T">
+    <End Type="OMHRDContext.ProductColor_T" Role="ProductColor_T" Multiplicity="0..1" />
+    <End Type="OMHRDContext.OrderProduct_T" Role="OrderProduct_T" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductColor_T">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OrderProduct_T">
+        <PropertyRef Name="ColorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderProduct_T_ProductSize_T">
+    <End Type="OMHRDContext.ProductSize_T" Role="ProductSize_T" Multiplicity="1" />
+    <End Type="OMHRDContext.OrderProduct_T" Role="OrderProduct_T" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductSize_T">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OrderProduct_T">
+        <PropertyRef Name="SizeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_T_ProductSubCategory_T">
+    <End Type="OMHRDContext.ProductSubCategory_T" Role="ProductSubCategory_T" Multiplicity="1" />
+    <End Type="OMHRDContext.Product_T" Role="Product_T" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductSubCategory_T">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Product_T">
+        <PropertyRef Name="SubCategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductPrice_T_Product_T">
+    <End Type="OMHRDContext.Product_T" Role="Product_T" Multiplicity="1" />
+    <End Type="OMHRDContext.ProductPrice_T" Role="ProductPrice_T" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product_T">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProductPrice_T">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductSubCategory_T_ProductCategory_T">
+    <End Type="OMHRDContext.ProductCategory_T" Role="ProductCategory_T" Multiplicity="1" />
+    <End Type="OMHRDContext.ProductSubCategory_T" Role="ProductSubCategory_T" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductCategory_T">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProductSubCategory_T">
+        <PropertyRef Name="CategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductPrice_T_ProductColor_T">
+    <End Type="OMHRDContext.ProductColor_T" Role="ProductColor_T" Multiplicity="0..1" />
+    <End Type="OMHRDContext.ProductPrice_T" Role="ProductPrice_T" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductColor_T">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProductPrice_T">
+        <PropertyRef Name="ProductColorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductPrice_T_ProductSize_T">
+    <End Type="OMHRDContext.ProductSize_T" Role="ProductSize_T" Multiplicity="1" />
+    <End Type="OMHRDContext.ProductPrice_T" Role="ProductPrice_T" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductSize_T">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProductPrice_T">
+        <PropertyRef Name="ProductSizeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserDocument_T_UserDocument_T">
+    <End Type="OMHRDContext.UserProfile_T" Role="UserProfile_T" Multiplicity="1" />
+    <End Type="OMHRDContext.UserDocument_T" Role="UserDocument_T" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserProfile_T">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserDocument_T">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

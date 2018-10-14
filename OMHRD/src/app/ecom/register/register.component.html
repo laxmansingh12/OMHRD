@@ -1,0 +1,102 @@
+
+<!-- <div class="col-sm-12" [hidden]="isAcceptedTC">
+  <mat-checkbox [(ngModel)]="isAcceptedTC">
+    By creating an account, you agree to OM HRD's Conditions of Use and Privacy Notice. Terms and Conditions are a set
+    of rules and guidelines that a user must agree to in order to use your website or mobile app. It acts as a legal
+    contract between you (the company) who has the website or mobile app and the user who access your website and
+    mobile app.
+    It’s up to you to set the rules and guidelines that the user must agree to. You can think of your Terms and
+    Conditions agreement as the legal agreement where you maintain your rights to exclude users from your app in the
+    event that they abuse your app, and where you maintain your legal rights against potential app abusers, and so on.
+  </mat-checkbox>
+
+</div>
+<div class="col-sm-12" [hidden]="!isAcceptedTC">
+  <div class="col-sm-6">
+    <div mat-dialog-content>
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label>First Name</mat-label>
+          <input matInput placeholder="First name" [(ngModel)]="user.FirstName" class="login-input">
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label>Last Name</mat-label>
+          <input type="text" matInput placeholder="Last Name" [(ngModel)]="user.LastName" class="login-input">
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label>Username</mat-label>
+          <input matInput placeholder="Username" [(ngModel)]="user.Username" class="login-input">
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label>Password</mat-label>
+          <input type="password" matInput placeholder="Password" [(ngModel)]="user.Password" class="login-input">
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label>Confirm Password</mat-label>
+          <input type="password" matInput placeholder="Confirm Password" [(ngModel)]="confirmPassword" class="login-input">
+        </mat-form-field>
+      </p>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div mat-dialog-content>
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input matInput placeholder="Email" [(ngModel)]="user.Email" class="login-input">
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label>Contact Number</mat-label>
+          <input type="text" matInput placeholder="Contact Number" [(ngModel)]="user.Contact" class="login-input">
+        </mat-form-field>
+      </p>
+    </div>
+  </div>
+</div>
+<div class="clearfix"></div>
+<div mat-dialog-actions>
+  <button mat-button [mat-dialog-close]>Cancel</button>
+  <button mat-button cdkFocusInitial>Submit</button>
+</div> -->
+
+
+<!-- Modal content-->
+<div class="register">
+		<div class="container">
+      <h3 class="animated wow zoomIn" data-wow-delay=".5s">Join Us</h3>
+      <div *ngIf="!flagAcceptJoin">
+      <div class="register-check-box">
+          <div class="check">
+            <label class="checkbox">
+              <input type="checkbox" name="checkbox" [(ngModel)]="flagAcceptTC">
+              <i> </i>By creating an account, you agree to OM HRD's Conditions of Use and Privacy Notice. Terms and Conditions are a set of rules and guidelines that a user must agree to in order to use your website or mobile app. It acts as a legal contract between you (the company) who has the website or mobile app and the user who access your website and mobile app. 
+              It’s up to you to set the rules and guidelines that the user must agree to. You can think of your Terms and Conditions agreement as the legal agreement where you maintain your rights to exclude users from your app in the event that they abuse your app, and where you maintain your legal rights against potential app abusers, and so on.</label>
+          </div>
+      </div>
+      <div class="text-center">
+        <a class="" *ngIf="flagAcceptTC" (click)="flagAcceptJoin=true;">JOIN US</a>
+      </div>
+    </div>
+			<div class="login-form-grids" *ngIf="flagAcceptJoin">
+					<input type="text" placeholder="First Name" [(ngModel)]="user.FirstName" required=" " >
+					<input type="text" placeholder="Last Name" [(ngModel)]="user.LastName" required=" " >			
+					<input type="email" placeholder="Email Address" [(ngModel)]="user.Email" required=" " >		
+					<input type="email" placeholder="Username" [(ngModel)]="user.Username" required=" " >
+					<input type="password" placeholder="Password" [(ngModel)]="user.Password" required=" " >
+					<input type="password" placeholder="Password Confirmation" required=" " >		
+					<input type="text" placeholder="Contact Number" [(ngModel)]="user.ContactNo">	
+					<input type="text" placeholder="Reference Id" [(ngModel)]="user.ReferenceBy">					
+					<input type="submit" value="Register" (click)="registerUser()">
+			</div>
+		</div>
+	</div>
